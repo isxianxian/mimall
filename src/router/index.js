@@ -1,18 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 import Home from '../pages/home.vue'
 import Index from '../pages/index.vue'
-import Product from '../pages/product.vue'
-import Detail from '../pages/detail.vue'
-import Login from '../pages/login.vue'
-import Cart from '../pages/cart.vue'
-import OrderIndex from '../pages/orderIndex.vue'
-import OrderList from '../pages/orderList.vue'
-import OrderPay from '../pages/orderPay.vue'
-import OrderConfrim from '../pages/orderConfrim.vue'
-import Alipay from '../pages/aliPay.vue'
-
 import { getCart } from '@/api/api.js'
 import store from '@/store'
 
@@ -33,49 +22,49 @@ const router = new Router({
                 },
                 {
                     path: 'product/:id',
-                    component: Product
+                    component: () => import('../pages/product.vue')
                 },
                 {
                     path: 'detail/:id',
-                    component: Detail
+                    component: () => import('../pages/detail.vue')
                 },
             ]
         },
         {
             path: '/login',
             name: 'login',
-            component: Login
+            component: () => import('../pages/login.vue')
         },
         {
             path: '/cart',
             name: 'cart',
-            component: Cart
+            component: () => import('../pages/cart.vue')
         },
         {
             path: '/order',
             name: 'order',
             redirect: '/order/list',
-            component: OrderIndex,
+            component: () => import('../pages/orderIndex.vue'),
             children: [
                 {
                     path: 'list',
                     name: 'order-list',
-                    component: OrderList
+                    component: () => import('../pages/orderList.vue')
                 },
                 {
                     path: 'confirm',
                     name: 'order-confirm',
-                    component: OrderConfrim
+                    component: () => import('../pages/orderConfrim')
                 },
                 {
                     path: 'pay',
                     name: 'order-pay',
-                    component: OrderPay
+                    component: () => import('../pages/orderPay.vue')
                 },
                 {
                     path: 'alipay',
                     name: 'alipay',
-                    component: Alipay
+                    component: () => import('../pages/aliPay')
                 }
             ]
         }

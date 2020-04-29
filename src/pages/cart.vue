@@ -80,6 +80,7 @@
                 </div>
             </div>
         </div>
+        <no-data tip="当前暂未向购物车添加商品"></no-data>
         <service-bar></service-bar>
         <nav-footer></nav-footer>
     </div>
@@ -89,6 +90,7 @@
     import ServiceBar from 'coms/ServiceBar.vue'
     import NavFooter from 'coms/NavFooter.vue'
     import OrderHeader from 'coms/OrderHeader.vue'
+    import NoData from 'coms/NoData.vue'
     import {
         getCartList,
         selectAll,
@@ -194,7 +196,8 @@
         components: {
             ServiceBar,
             NavFooter,
-            OrderHeader
+            OrderHeader,
+            NoData
         }
     }
 </script>

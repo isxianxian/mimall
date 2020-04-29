@@ -11,6 +11,7 @@
                 </div>
                 <div class="topbar-user">
                     <a href="javascript:;" v-if="username">{{username}}</a>
+                    <a href="#/order/list" v-if="username">我的订单</a>
                     <a href="javascript:;" v-if="username" @click="logout">退出</a>
                     <a
                         href="javascript:;"

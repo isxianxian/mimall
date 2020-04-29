@@ -59,7 +59,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 滚动加载 -->
                     <div
+                        v-if="false"
                         class="scroll-more"
                         v-infinite-scroll="loadMore"
                         infinite-scroll-disabled="busy"

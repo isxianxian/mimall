@@ -42,13 +42,13 @@
         <div class="footer">
             <div class="link">
                 <a href="javascript:;">简体</a>
-                <span class="line">|</span>
+                <span class="line"></span>
                 <a href="javascript:;">繁体</a>
-                <span class="line">|</span>
+                <span class="line"></span>
                 <a href="javascript:;">English</a>
-                <span class="line">|</span>
+                <span class="line"></span>
                 <a href="javascript:;">常见问题</a>
-                <span class="line">|</span>
+                <span class="line"></span>
                 <a href="javascript:;">隐私政策</a>
             </div>
             <div
@@ -139,9 +139,10 @@
                         .line {
                             width: 0;
                             height: 24px;
+                            line-height: 24px;
                             vertical-align: middle;
                             margin: 0 36px;
-                            border-right: 2px solid $colorB;
+                            font-size: 24px;
                         }
                     }
                     .body {
