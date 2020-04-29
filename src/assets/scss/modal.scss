@@ -1,0 +1,49 @@
+.modal {
+  z-index: 1;
+  @include position(fixed);
+  &.slide-enter,
+  &.slide-leave-to {
+    top: -100%;
+  }
+  &.slide-enter-active,
+  &.slide-leave-active {
+    transition: all 0.3s;
+  }
+  .mask {
+    @include position(fixed);
+    background-color: $colorI;
+    opacity: 0.5;
+  }
+  .modal-dialog {
+    @include position(absolute, 40%, 50%, 660px, auto);
+    background-color: $colorG;
+    transform: translate(-50%, -50%);
+    .modal-header {
+      height: 60px;
+      padding: 0 25px;
+      font-size: $fontI;
+      background-color: $colorJ;
+      @include flex(space-between, center);
+      .icon {
+        width: 14px;
+        height: 14px;
+        text-align: center;
+        color: #000000;
+        background-color: transparent;
+        transition: all 0.1s;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+    .modal-body {
+      padding: 42px 40px 54px;
+      font-size: 14px;
+    }
+    .modal-footer {
+      height: 82px;
+      text-align: center;
+      background-color: $colorG;
+    }
+  }
+}
